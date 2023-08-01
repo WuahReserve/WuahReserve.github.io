@@ -48,11 +48,21 @@
       font-family: 'Bad Script', cursive;
     }
 
-    .larger-text {
+    .main-text {
       font-size: 32px;
       font-weight: bold;
       color: #333;
       font-family: 'Bad Script', cursive;
+    }
+
+    .small-picture {
+      background-image: url('ring.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 40px; /* Adjust the size of the small picture */
+      height: 40px; /* Adjust the size of the small picture */
+      margin-right: 10px; /* Adjust the distance from the text */
+      margin-left: 10px; /* Adjust the distance from the text */
     }
 
     .bell-container {
@@ -82,7 +92,11 @@
     <img class="bell" src="bell.png" alt="Bell">
   </div>
   <div class="button-container">
-    <h1 class="larger-text">Simone & Giulia</h1>
+    <h1 class="larger-text">
+      <span class="small-picture"></span>
+      Simone Giulia
+      <span class="small-picture"></span>
+    </h1>
     <h2 class="text-above-buttons">18 Maggio 2024</h2>
     <a href="https://www.matrimonio.com/web/pestoebaba" target="_blank">
       <button class="button">
