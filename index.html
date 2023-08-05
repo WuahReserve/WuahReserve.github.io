@@ -81,34 +81,6 @@
         <img src="icons8-great-britain-100.png" alt="English website" width="100" height="100">
       </button>
     </a>
-    <button id="addEventButton">Add Event to Google Calendar</button>
   </div>
-
-  <script>
-    document.getElementById('addEventButton').addEventListener('click', function() {
-      // Event details
-      var eventName = encodeURIComponent('My Event');
-      var eventDate = '2023-07-15'; // YYYY-MM-DD format
-      var eventStartTime = '10:00';
-      var eventEndTime = '12:00';
-      var eventLocation = encodeURIComponent('123 Main St, City');
-      var notificationDays = 14; // 2 weeks
-
-      // Calculate notification time
-      var notificationDate = new Date(eventDate);
-      notificationDate.setDate(notificationDate.getDate() - notificationDays);
-      var notificationTime = notificationDate.toISOString().substr(0, 10);
-
-      // Create event URL
-      var eventUrl = 'https://www.google.com/calendar/event?action=TEMPLATE'
-        + '&text=' + eventName
-        + '&dates=' + eventDate + 'T' + eventStartTime + '/' + eventDate + 'T' + eventEndTime
-        + '&location=' + eventLocation
-        + '&reminders=' + encodeURIComponent('days:' + notificationDays + '&email=youremail@example.com');
-
-      // Open the event URL in a new tab
-      window.open(eventUrl, '_blank');
-    });
-  </script>
 </body>
 </html>
